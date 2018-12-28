@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
     ListViewAdapter adapter;
     String[] title;
     String[] description;
-    int[] icon;
+
 
     private Toast backToast;
     private long backPressed;
@@ -48,16 +48,16 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         ActionBar actionBar = getSupportActionBar();
-        actionBar.setTitle("Items List");
+        actionBar.setTitle("Cari SDKI");
 
         title = new String[]{"Battery", "Cpu", "Display", "Memory", "Sensor"};
         description = new String[]{"Battery detail...", "Cpu detail...", "Display detail...", "Memory detail...", "Sensor detail..."};
-        icon = new int[]{R.drawable.battery, R.drawable.cpu, R.drawable.display, R.drawable.memory, R.drawable.sensor};
+
 
         listView = findViewById(R.id.listView);
 
         for (int i =0; i<title.length; i++){
-            Model model = new Model(title[i], description[i], icon[i]);
+            Model model = new Model(title[i], description[i]);
             //bind all strings in an array
             arrayList.add(model);
         }
