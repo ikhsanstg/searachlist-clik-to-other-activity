@@ -8,7 +8,10 @@ import android.text.TextUtils;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ListView;
+import android.widget.Toast;
+
 import java.util.ArrayList;
+import static android.widget.Toast.makeText;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -17,7 +20,27 @@ public class MainActivity extends AppCompatActivity {
     String[] title;
     String[] description;
     int[] icon;
+
+    private Toast backToast;
+    private long backPressed;
+
     ArrayList<Model> arrayList = new ArrayList<Model>();
+
+
+    @Override
+    public void onBackPressed (){
+        if (backPressed + 2000 > System.currentTimeMillis()){
+                backToast.cancel ();
+                super.onBackPressed();
+                return;
+        } else  {
+        backToast = makeText(getBaseContext(), "Press back again to Exit", Toast.LENGTH_SHORT);
+        backToast.show();
+         }
+        backPressed = System.currentTimeMillis();
+
+
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
