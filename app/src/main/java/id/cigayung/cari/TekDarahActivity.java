@@ -3,15 +3,16 @@ import android.content.Intent;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.webkit.WebSettings;
 import android.webkit.WebView;
 
-public class NewActivity extends AppCompatActivity {
+public class TekDarahActivity extends AppCompatActivity {
 
     WebView webview;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_new);
+        setContentView(R.layout.activity_tek_darah);
 
         ActionBar actionBar = getSupportActionBar();
 
@@ -25,11 +26,15 @@ public class NewActivity extends AppCompatActivity {
         actionBar.setTitle(mActionBarTitle);
         //set text in textview
 
-        webview =(WebView) findViewById(R.id.webview1);
+        webview =(WebView) findViewById(R.id.webview);
         webview.getSettings().setBuiltInZoomControls(true);
         webview.loadUrl("file:///android_asset/tensi.html");
+
+        WebSettings webSettings = webview.getSettings();
+        webSettings.setJavaScriptEnabled(true);
 
 
 
     }
 }
+

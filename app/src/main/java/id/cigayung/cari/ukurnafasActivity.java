@@ -1,17 +1,19 @@
 package id.cigayung.cari;
+
 import android.content.Intent;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.webkit.WebView;
 
-public class NewActivity extends AppCompatActivity {
+public class ukurnafasActivity extends AppCompatActivity {
 
-    WebView webview;
+
+    WebView webviewnafas;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_new);
+        setContentView(R.layout.activity_ukurnafas);
 
         ActionBar actionBar = getSupportActionBar();
 
@@ -25,11 +27,12 @@ public class NewActivity extends AppCompatActivity {
         actionBar.setTitle(mActionBarTitle);
         //set text in textview
 
-        webview =(WebView) findViewById(R.id.webview1);
-        webview.getSettings().setBuiltInZoomControls(true);
-        webview.loadUrl("file:///android_asset/tensi.html");
+        webviewnafas =(WebView) findViewById(R.id.webviewnafas);
+        webviewnafas.getSettings().setBuiltInZoomControls(true);
+        webviewnafas.loadUrl("file:///android_asset/nafas.html");
 
 
 
     }
 }
+

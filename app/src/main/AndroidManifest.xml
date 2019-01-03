@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="id.cigayung.cari">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -11,13 +13,31 @@
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
             <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity android:name=".NewActivity" />
-        <activity android:name=".CpuActivity"></activity>
+        <activity android:name=".CpuActivity" />
+        <activity android:name=".TekDarahActivity" />
+        <activity android:name=".ukursuhuActivity" />
+        <activity android:name=".ukurnafasActivity" />
+        <activity android:name=".ukurnadiActivity" />
+        <activity android:name=".gliserinActivity" />
+        <activity android:name=".huknahActivity" />
+        <activity android:name=".inspeksiActivity" />
+        <activity android:name=".palpasiActivity" />
+        <activity android:name=".restrainActivity" />
+        <activity android:name=".cucitgnActivity" />
+        <activity android:name=".cucitgnSterilActivity" />
+        <activity android:name=".maskerActivity" />
+        <activity android:name=".skortActivity" />
+        <activity android:name=".sarungtgnsterilActivity" />
+        <activity android:name=".desinfeksiActivity" />
+        <activity android:name=".desinfeksikimiaActivity" />
+        <activity android:name=".sterilisasiActivity"></activity>
     </application>
 
 </manifest>

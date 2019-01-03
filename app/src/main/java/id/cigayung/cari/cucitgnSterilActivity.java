@@ -1,18 +1,19 @@
 package id.cigayung.cari;
+
 import android.content.Intent;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.webkit.WebSettings;
 import android.webkit.WebView;
 
-public class NewActivity extends AppCompatActivity {
+public class cucitgnSterilActivity extends AppCompatActivity {
 
-    WebView webview;
+    WebView webviewcucitgnSteril;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_new);
-
+        setContentView(R.layout.activity_cucitgn_steril);
         ActionBar actionBar = getSupportActionBar();
 
 
@@ -25,11 +26,11 @@ public class NewActivity extends AppCompatActivity {
         actionBar.setTitle(mActionBarTitle);
         //set text in textview
 
-        webview =(WebView) findViewById(R.id.webview1);
-        webview.getSettings().setBuiltInZoomControls(true);
-        webview.loadUrl("file:///android_asset/tensi.html");
+        webviewcucitgnSteril =(WebView) findViewById(R.id.webviewcucitgnSteril);
+        webviewcucitgnSteril.getSettings().setBuiltInZoomControls(true);
+        webviewcucitgnSteril.loadUrl("file:///android_asset/cucitgnSteril.html");
 
-
-
+        WebSettings webSettings = webviewcucitgnSteril.getSettings();
+        webSettings.setJavaScriptEnabled(true);
     }
 }

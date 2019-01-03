@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
     ListView listView;
     ListViewAdapter adapter;
     String[] title;
-    String[] description;
+
 
 
     private Toast backToast;
@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
                 super.onBackPressed();
                 return;
         } else  {
-        backToast = makeText(getBaseContext(), "Press back again to Exit", Toast.LENGTH_SHORT);
+        backToast = makeText(getBaseContext(), "Pencet sakali deui lamun rek tutup aplikasina mah", Toast.LENGTH_SHORT);
         backToast.show();
          }
         backPressed = System.currentTimeMillis();
@@ -48,16 +48,22 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         ActionBar actionBar = getSupportActionBar();
-        actionBar.setTitle("Cari SDKI");
+        actionBar.setTitle("Cari SOP Keperawatan");
 
-        title = new String[]{"Battery", "Cpu", "Display", "Memory", "Sensor"};
-        description = new String[]{"Battery detail...", "Cpu detail...", "Display detail...", "Memory detail...", "Sensor detail..."};
+        title = new String[]{"Menghitung Denyut Nadi", "Menghitung Pernafasan", "Mengukur Tekanan Darah",
+                "Memberikan Semprit Gliserin", "Memberikan Huknah Rendah atau Tinggi",
+                "Melakukan Pemeriksaan Fisik dengan Cara Inspeksi","Mengukur Suhu Tubuh",
+                "Mengikat Klien (restraint) Pada Tangan dan Kaki","Melakukan Pemeriksaan Fisik dengan Cara Palpasi",
+                "Mencuci Tangan Biasa","Mencuci Tangan Steril","Prosedur Memakai Masker","Prosedur Memakai Skort",
+                "Memakai Sarung Tangan steril","Mendesinfeksi Alat","Mendesinfeksi dengan Bahan Kimia",
+                "Sterilisasi Alat"};
+
 
 
         listView = findViewById(R.id.listView);
 
         for (int i =0; i<title.length; i++){
-            Model model = new Model(title[i], description[i]);
+            Model model = new Model(title[i]);
             //bind all strings in an array
             arrayList.add(model);
         }

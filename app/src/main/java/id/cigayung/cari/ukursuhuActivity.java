@@ -1,19 +1,22 @@
 package id.cigayung.cari;
+
 import android.content.Intent;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.webkit.WebSettings;
 import android.webkit.WebView;
 
-public class NewActivity extends AppCompatActivity {
+public class ukursuhuActivity extends AppCompatActivity {
 
-    WebView webview;
+    WebView webviewsuhu;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_new);
+        setContentView(R.layout.activity_ukursuhu);
 
         ActionBar actionBar = getSupportActionBar();
+
 
 
         //get data from previous activity when item of listview is clicked using intent
@@ -25,11 +28,15 @@ public class NewActivity extends AppCompatActivity {
         actionBar.setTitle(mActionBarTitle);
         //set text in textview
 
-        webview =(WebView) findViewById(R.id.webview1);
-        webview.getSettings().setBuiltInZoomControls(true);
-        webview.loadUrl("file:///android_asset/tensi.html");
+        webviewsuhu =(WebView) findViewById(R.id.webviewsuhu);
+        webviewsuhu.getSettings().setBuiltInZoomControls(true);
+        webviewsuhu.loadUrl("file:///android_asset/suhu.html");
+
+        WebSettings webSettings = webviewsuhu.getSettings();
+        webSettings.setJavaScriptEnabled(true);
 
 
 
     }
 }
+
